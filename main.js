@@ -1,12 +1,12 @@
-var color = 'blue';
+/*
+**  jQuery intro
+**      'write less, do more',
+**      Simplify javascript by writing less code
+**      Event handling & animations
+*/
 
-function printColor(){
-    if(arguments[0]){
-        color = 'purple';
-    }
-    console.log(color);
-
-}
-printColor();
-printColor(color);
+$(this).hide();
+$('p').hide();//selector
+$(".test").hide();//class
+$("#test").hide();//id
 
