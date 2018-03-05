@@ -1,12 +1,17 @@
-var color = 'blue';
+function locale(){
+    var city = 'orlando';
 
-function printColor(){
-    if(arguments[0]){
-        color = 'purple';
-    }
-    console.log(color);
+    return{
+        get:function() {console.log(city);},
+        set:function(newCity) {
+            if(newCity){
+                city = newCity;
+            }
+        }//end set
+    }//end return object
+}//end function locale(){
 
-}
-printColor();
-printColor(color);
-
+var myPlace = locale();
+myPlace.get();
+myPlace.set('Deland');
+myPlace.get();
