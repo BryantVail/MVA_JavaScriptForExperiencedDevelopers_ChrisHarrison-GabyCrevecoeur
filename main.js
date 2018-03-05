@@ -1,12 +1,7 @@
-var color = 'blue';
+var x = 3;
 
-function printColor(){
-    if(arguments[0]){
-        color = 'purple';
-    }
-    console.log(color);
-
+function square(num){
+    return num*num;
 }
-printColor();
-printColor(color);
 
+console.log(square(x));
