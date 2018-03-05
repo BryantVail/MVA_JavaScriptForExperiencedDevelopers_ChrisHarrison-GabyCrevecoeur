@@ -32,6 +32,132 @@
         -info is usually manipulated to display as needed. 
 */
 
+function myFn(a,b){
+    var a = a;
+    var b = b;
+
+    try{
+        if(b==0){
+            throw("Divide by Zero Error");
+        }
+        else{
+            var val = a/b;
+            console.log(val);
+        }
+    }//end try
+    catch(e){
+        var msg;
+        msg  = `Error: "${e}"`;
+        console.log(msg);
+    }
+    finally{
+        console.log('finally');
+    }
+}//end function myFn
+
+myFn(1,0);
+myFn(5,2);
+myFn(10,5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
