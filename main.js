@@ -1,12 +1,24 @@
-var color = 'blue';
+/*
+**  functions w/out names
+**  Dynamically Declared @ runtime
+**  Uses:
+**      -Function Expression
+**      -IN an object
+**      -Event Handler
+**      -Self Invoking Function/ Recursive
+**  Commonly: Recursion & Enclosures
+*/
 
-function printColor(){
-    if(arguments[0]){
-        color = 'purple';
-    }
-    console.log(color);
+//anonymous function
+var ven = function(){
+    console.log('anonymous');
+};//end anonymous function, assigned to ven
 
-}
-printColor();
-printColor(color);
+//named function
+function venn(){
+    console.log('named venn');
+}//end venn
 
+
+ven();
+venn();
