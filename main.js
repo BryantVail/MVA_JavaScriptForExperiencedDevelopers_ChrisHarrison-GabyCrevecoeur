@@ -1,12 +1,30 @@
-var color = 'blue';
+//main
 
-function printColor(){
-    if(arguments[0]){
-        color = 'purple';
+//function expression
+var sayHi = function(){
+    console.log('FunctionExpression');
+};//end sayHi
+sayHi();
+
+//Anonymous Function within an object
+var Pony = {
+    sayName: function(){
+        console.log('Anonymous Function within an object');
     }
-    console.log(color);
+};
+Pony.sayName();
 
-}
-printColor();
-printColor(color);
+//event handler
+/*
+$("p").click = function(){
+    alert('hello with a click');
+};//end $("p").click
+//no explicit invokation
+*/
+
+//self invoking functions
+((function(){
+    var arg = arguments[0];
+    console.log(arg);
+})('self invoked'));
 
