@@ -1,7 +1,12 @@
 var color = 'blue';
 
-if(color){
-    color = 'purple';
-}
+function printColor(){
+    if(arguments[0]){
+        color = 'purple';
+    }
+    console.log(color);
 
-console.log(color);
+}
+printColor();
+printColor(color);
+
