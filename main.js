@@ -1,12 +1,8 @@
-var color = 'blue';
-
-function printColor(){
-    if(arguments[0]){
-        color = 'purple';
+(function(){
+    arg = arguments[0];
+    function print(str){
+        console.log(str)
     }
-    console.log(color);
-
-}
-printColor();
-printColor(color);
+    print(arg)//result returned by the immediate Invokation of the Anonymous Function
+})('name');//arg passed to the IIFE
 
