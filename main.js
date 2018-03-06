@@ -19,18 +19,44 @@
 
 //creating an object
 
-function Order(user, total){
-    //log creation of object
-    console.log('OrderCreated');
+function Person(name){//base class constructor
+    this.firstName = name;
+}
 
-    this.user   = user;
-    this.total  = total;
-    this.type   = function(){
-        console.log('Hi, I\'m a fruit!');
-    };//end this.type  = function(){
-}//end function Order(user, total){
+Person.prototype.toString = function(){
+    return `This person's name is ${this.name}`;
+};
 
-var orange = new Order('Orange', 4.25);
+function Student(firstName, favoriteSubj){
+    Person.call(this, firstName);//passing superClass constructor
+
+    //student specific properties
+    this.favoriteSubject = favoriteSubj;
+}//end function Student(...) constructor
+
+Student.prototype = Object.create(Person.prototype);
+
+//set the 'consructor' property to refer to Student
+Student.prototype.constructor = Student;
+
+Student.prototype.toString = function(){
+    console.log(`This Student's Name is:\t  ${this.firstName},\nMy favorite Subject is:\t  ${this.favoriteSubject}.`);
+};//end Student.prototype.sayHello = function(){
+
+//example usage
+var student1 = new Student('Bry', 'Computer Science');
+    student1.toString();
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
